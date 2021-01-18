@@ -17,6 +17,17 @@ store.js
 - redux-devtools-extension
     - composeWithDevTools
 
-
-
+Redux Flow
+    Start with the constants
+    Create a reducer
+    Add the reducer to the Store
+    Create Action
+    Go to the UI implement
+        import useDispatch,useSelector
+        useDispatch
+        import Actions
+        dispatch an Action
+        useSelector to get the state
+        useSelector state thru reducer from the store
+        destructure the state fron useSelector
 ```
