@@ -30,4 +30,13 @@ Redux Flow
         useSelector to get the state
         useSelector state thru reducer from the store
         destructure the state fron useSelector
+
+The Project Flow is:
+- Create the backend route
+- Create the Constants
+- Create the reducers
+- Create the action
+- Create the screen
+- Bring the action in and call it
+- Get what we want in the state
 ```
