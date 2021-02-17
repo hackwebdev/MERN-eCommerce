@@ -17,7 +17,6 @@ const ProductEditScreen = ({ match, history }) => {
   const [category, setCategory] = useState("");
   const [countInStock, setCountInStock] = useState(0);
   const [description, setDescription] = useState("");
-  const [uploading, setUploading] = useState(false);
 
   const dispatch = useDispatch();
 
@@ -37,24 +36,6 @@ const ProductEditScreen = ({ match, history }) => {
       setDescription(product.description);
     }
   }, [dispatch, history, productId, product]);
-
-  const uploadFileHandler = async (e) => {
-    const file = e.target.files[0];
-    const formData = new FormData();
-    formData.append("image", file);
-    setUploading(true);
-
-    try {
-      const config = {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      };
-    } catch (error) {
-      console.error(error);
-      setUploading(false);
-    }
-  };
 
   const submitHandler = (e) => {
     e.preventDefault();
